@@ -1,0 +1,16 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { pictures } from "../data/pictures"
+
+const { picture } = Astro.params
+
+const info = pictures.find(p => p.id == picture)
+
+if (!info) {
+    return Astro.redirect("/404")
+}
+---
+
+<Layout title="">
+    
+</Layout>
