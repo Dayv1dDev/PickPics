@@ -1,0 +1,16 @@
+---
+import ImageCard from "./ImageCard.astro";
+import { pictures } from "../data/pictures"
+---
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-2 max-w-5xl m-auto">
+    {
+        pictures.map(({ id, img, description }) => {
+            return (
+                <li>
+                    <ImageCard id={id} img={img} description={description} />	
+                </li>
+            )
+        })
+    }
+</ul>
